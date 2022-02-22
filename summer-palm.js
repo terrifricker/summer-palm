@@ -26,7 +26,7 @@ summerPalm.addEventListener('click', showColorBox);
 function showColorBox(e) {
     showColor(e);
     showBox(e);
-    setTimeout(hideBox, 3000); // problem when new area is clicked before this timeout ends
+
 }
 function showColor(e) {
     colorName.textContent = "";
@@ -43,9 +43,4 @@ function showBox(e) {
     modal.style.opacity = 1;
 }
 
-function hideBox() {
-    modal.style.opacity = 0;
-    modal.style.top = centerTop;
-    modal.style.left = centerLeft;
-}
 
