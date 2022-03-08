@@ -15,8 +15,8 @@
 	--st8: #476060;
 	--st9: #392C1F;
     --svg-height: 85vh;
-    --modal-width: 10rem;
-    --modal-height: 16rem;
+    --box-width: 10rem;
+    --box-height: 16rem;
 }
 svg {
     height: var(--svg-height);
@@ -30,13 +30,13 @@ a:hover {
     cursor: grab;
     opacity: 0.6;
 }
-.modal {
-    width: var(--modal-width);
-    height: var(--modal-height);
+.info-box {
+    width: var(--box-width);
+    height: var(--box-height);
     position: absolute;
     /* center of palm */
-    top: calc( var(--svg-height)/2 - var(--modal-height)/2 - 1rem);
-    left: calc( var(--svg-height)/2 - var(--modal-width)/2 - 1rem);
+    top: calc( var(--svg-height)/2 - var(--box-height)/2 - 1rem);
+    left: calc( var(--svg-height)/2 - var(--box-width)/2 - 1rem);
     margin: 2rem;
     border: 2pt solid black;
     display: flex;

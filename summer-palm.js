@@ -1,4 +1,4 @@
-/* This javascript makes a modal box show the color
+/* This javascript makes an information box that shows the color
 of the area clicked on the svg. */
 
 const allColors = {
@@ -15,11 +15,11 @@ const allColors = {
 }
 
 const summerPalm = document.querySelector("svg");
-const modal = document.querySelector(".modal");
+const infoBox = document.querySelector(".info-box");
 const colorName = document.querySelector(".color-name");
 const colorBox = document.querySelector("#color-box");
-const centerTop = window.getComputedStyle(modal).getPropertyValue('top');
-const centerLeft = window.getComputedStyle(modal).getPropertyValue('left');
+const centerTop = window.getComputedStyle(infoBox).getPropertyValue('top');
+const centerLeft = window.getComputedStyle(infoBox).getPropertyValue('left');
 
 summerPalm.addEventListener('click', showColorBox);
 
@@ -38,9 +38,9 @@ function showColor(e) {
 function showBox(e) {
     let offset = parseInt(e.target.getAttribute("class").slice(2));
     let top = 0.5 + offset;
-    modal.style.top = top+"rem";
-    modal.style.left = 50+"vw";
-    modal.style.opacity = 1;
+    infoBox.style.top = top+"rem";
+    infoBox.style.left = 50+"vw";
+    infoBox.style.opacity = 1;
 }
 
 
