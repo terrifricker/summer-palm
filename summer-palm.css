@@ -22,6 +22,10 @@ svg {
     height: var(--svg-height);
     position: relative;
 }
+.svg-image {
+    display: flex;
+    justify-content: center;
+}
 a:link,
 a:visited {
     opacity: 1;
