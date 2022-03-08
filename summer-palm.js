@@ -52,19 +52,15 @@ function setLocation(box, e) {
     let offsetX = 0;
 
     // if offset is odd move to right
-    console.log(offset);
     if (offset % 2 == 1) {
         offsetX = 100+'vh';
     }
     // else move to left
     else offsetX = 25+'vh';
-    console.log(offsetX);
     box.style.left = offsetX;
 
     offsetY = 7 * offset;
     let top = 0.5 + offsetY;
-    console.log(offsetY);
-    console.log(top);
     box.style.top = top+"vh";
 }
 function appendBox(box) {
