@@ -1,20 +1,15 @@
 <!-- 
 This website starts with a svg image.  When an area of
-the image is clicked, a modal box is created by javascript
-that shows to give information about what was clicked.
+the image is clicked, an information box is created by javascript
+that gives information about what was clicked.
 Currently, the information shown is the color name and a box
 with the same background color of the area clicked in the svg.
-The modal box looks as if it transitions from the center of the
-svg to an area to the side, then disappears after 3 seconds.
-Only one modal box is shown at a time.  PROBLEM: Clicking a new
-area in the svg doesn't stop the 3 second timeout to hide the
-box, so if a new area is clicked before the previous box disappears,
-the new box disappears in the amount remaining of the first 3
-second timeout.
+The information box looks as if it transitions from the center of the
+svg to an area to the side.
 
 Within the svg code, anchor links were added to the defined areas
 I wanted. The event listener gathers the color information from the
-event target to create an appropriate modal.
+event target to create an the information box.
 -->
 
 
@@ -518,10 +513,7 @@ event target to create an appropriate modal.
 </svg>
 </main>
 
-<div class="modal">
-	<p class="color-name">English Vermillion</p>
-	<div id="color-box" class="st0"></div>
-</div>
+<div class="boxes"></div>
 
 <script src="summer-palm.js"></script>
     </body>

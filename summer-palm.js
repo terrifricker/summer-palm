@@ -1,4 +1,4 @@
-/* This javascript makes a modal box show the color
+/* This javascript makes an information box that shows the color
 of the area clicked on the svg. */
 
 const allColors = {
@@ -15,37 +15,46 @@ const allColors = {
 }
 
 const summerPalm = document.querySelector("svg");
-const modal = document.querySelector(".modal");
-const colorName = document.querySelector(".color-name");
-const colorBox = document.querySelector("#color-box");
-const centerTop = window.getComputedStyle(modal).getPropertyValue('top');
-const centerLeft = window.getComputedStyle(modal).getPropertyValue('left');
+const boxes = document.querySelector(".boxes");
 
-summerPalm.addEventListener('click', showColorBox);
+summerPalm.addEventListener('click', newColorBox);
 
-function showColorBox(e) {
-    showColor(e);
-    showBox(e);
-    setTimeout(hideBox, 3000); // problem when new area is clicked before this timeout ends
+function newColorBox(e) {
+    let box = createNewElement(e);
+    setLocation(box, e);
+    appendBox(box);
 }
-function showColor(e) {
-    colorName.textContent = "";
-    colorBox.classList.remove(...colorBox.classList);
+function createNewElement(e) {
+    // create the info box container
+    const newBoxDiv = document.createElement('div');
+    newBoxDiv.classList.add("info-box");
+
+    // create the color name
+    const newParagaraph = document.createElement('p');
     let color = e.target.getAttribute("class");
-    colorName.append(allColors[color]);
-    colorBox.classList.add(color);
+    newParagaraph.innerHTML = (allColors[color]);
+
+    // create the colored box
+    const newSquare = document.createElement('div');
+    newSquare.classList.add("color-box");
+    newSquare.classList.add(color);
+
+    // append name and colored box to info box
+    newBoxDiv.appendChild(newParagaraph);
+    newBoxDiv.appendChild(newSquare);
+
+    return newBoxDiv;
 }
-function showBox(e) {
+
+function setLocation(box, e) {
     let offset = parseInt(e.target.getAttribute("class").slice(2));
     let top = 0.5 + offset;
-    modal.style.top = top+"rem";
-    modal.style.left = 50+"vw";
-    modal.style.opacity = 1;
+    box.style.top = top+"rem";
+    box.style.left = 50+"vw";
+    box.style.opacity = 1;
+}
+function appendBox(box) {
+    boxes.appendChild(box);
 }
 
-function hideBox() {
-    modal.style.opacity = 0;
-    modal.style.top = centerTop;
-    modal.style.left = centerLeft;
-}
 
