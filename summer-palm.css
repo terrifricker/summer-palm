@@ -38,17 +38,11 @@ a:hover {
     width: var(--box-width);
     height: var(--box-height);
     position: absolute;
-    /* center of palm */
-    top: calc( var(--svg-height)/2 - var(--box-height)/2 - 1rem);
-    left: calc( var(--svg-height)/2 - var(--box-width)/2 - 1rem);
-    margin: 2rem;
     border: 2pt solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.5s, top 1s, left 1s;
 }
 p {
     text-align: center;

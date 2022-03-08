@@ -48,10 +48,24 @@ function createNewElement(e) {
 
 function setLocation(box, e) {
     let offset = parseInt(e.target.getAttribute("class").slice(2));
-    let top = 0.5 + offset;
-    box.style.top = top+"rem";
-    box.style.left = 50+"vw";
-    box.style.opacity = 1;
+    let offsetY = 0;
+    let offsetX = 0;
+
+    // if offset is odd move to right
+    console.log(offset);
+    if (offset % 2 == 1) {
+        offsetX = 100+'vh';
+    }
+    // else move to left
+    else offsetX = 25+'vh';
+    console.log(offsetX);
+    box.style.left = offsetX;
+
+    offsetY = 7 * offset;
+    let top = 0.5 + offsetY;
+    console.log(offsetY);
+    console.log(top);
+    box.style.top = top+"vh";
 }
 function appendBox(box) {
     boxes.appendChild(box);
