@@ -5,12 +5,7 @@ that gives information about what was clicked.
 Currently, the information shown is the color name and a box
 with the same background color of the area clicked in the svg.
 The information box looks as if it transitions from the center of the
-svg to an area to the side, then disappears after 3 seconds.
-Only one modal box is shown at a time.  PROBLEM: Clicking a new
-area in the svg doesn't stop the 3 second timeout to hide the
-box, so if a new area is clicked before the previous box disappears,
-the new box disappears in the amount remaining of the first 3
-second timeout.
+svg to an area to the side.
 
 Within the svg code, anchor links were added to the defined areas
 I wanted. The event listener gathers the color information from the
