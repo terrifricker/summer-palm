@@ -27,13 +27,11 @@ function newColorBox(e) {
     let box = createNewElement();
     setColor(box, e);
     setLocation(box, e);
-    showBox(box);
 }
 
 function createNewElement() {
     const newBoxDiv = document.createElement('div');
     newBoxDiv.classList.add("info-box");
-    console.log(typeof(newBoxDiv));
     const newParagaraph = document.createElement('p');
     newParagaraph.classList.add("color-name");
     const newSquare = document.createElement('div');
@@ -42,18 +40,17 @@ function createNewElement() {
     
     newBoxDiv.appendChild(newParagaraph);
     newBoxDiv.appendChild(newSquare);
-    console.log(newBoxDiv);
     return newBoxDiv;
 
 }
-function setColor(e) {
+function setColor(box, e) {
     colorName.textContent = "";
     colorBox.classList.remove(...colorBox.classList);
     let color = e.target.getAttribute("class");
     colorName.append(allColors[color]);
     colorBox.classList.add(color);
 }
-function setLocation(e) {
+function setLocation(box, e) {
     let offset = parseInt(e.target.getAttribute("class").slice(2));
     let top = 0.5 + offset;
     infoBox.style.top = top+"rem";
