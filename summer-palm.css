@@ -15,8 +15,8 @@
 	--st8: #476060;
 	--st9: #392C1F;
     --svg-height: 85vh;
-    --box-width: 10rem;
-    --box-height: 16rem;
+    --box-width: 6rem;
+    --box-height: 8rem;
 }
 svg {
     height: var(--svg-height);
@@ -50,9 +50,12 @@ a:hover {
     opacity: 0;
     transition: opacity 0.5s, top 1s, left 1s;
 }
+p {
+    text-align: center;
+}
 .color-box {
-    width: 6rem;
-    height: 8rem;
+    width: 4rem;
+    height: 4rem;
     border: 0.5pt solid black;
 }
 .st0 {
