@@ -46,7 +46,7 @@ a:hover {
     opacity: 0;
     transition: opacity 0.5s, top 1s, left 1s;
 }
-#color-box {
+.color-box {
     width: 6rem;
     height: 8rem;
     border: 0.5pt solid black;

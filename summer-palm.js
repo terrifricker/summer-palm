@@ -15,47 +15,46 @@ const allColors = {
 }
 
 const summerPalm = document.querySelector("svg");
-const infoBox = document.querySelector(".info-box");
-const colorName = document.querySelector(".color-name");
-const colorBox = document.querySelector("#color-box");
-const centerTop = window.getComputedStyle(infoBox).getPropertyValue('top');
-const centerLeft = window.getComputedStyle(infoBox).getPropertyValue('left');
+const boxes = document.querySelector(".boxes");
 
 summerPalm.addEventListener('click', newColorBox);
 
 function newColorBox(e) {
-    let box = createNewElement();
-    setColor(box, e);
+    let box = createNewElement(e);
     setLocation(box, e);
+    appendBox(box);
 }
-
-function createNewElement() {
+function createNewElement(e) {
+    // create the info box container
     const newBoxDiv = document.createElement('div');
     newBoxDiv.classList.add("info-box");
+
+    // create the color name
     const newParagaraph = document.createElement('p');
-    newParagaraph.classList.add("color-name");
+    let color = e.target.getAttribute("class");
+    newParagaraph.innerHTML = (allColors[color]);
+
+    // create the colored box
     const newSquare = document.createElement('div');
     newSquare.classList.add("color-box");
+    newSquare.classList.add(color);
 
-    
+    // append name and colored box to info box
     newBoxDiv.appendChild(newParagaraph);
     newBoxDiv.appendChild(newSquare);
-    return newBoxDiv;
 
+    return newBoxDiv;
 }
-function setColor(box, e) {
-    colorName.textContent = "";
-    colorBox.classList.remove(...colorBox.classList);
-    let color = e.target.getAttribute("class");
-    colorName.append(allColors[color]);
-    colorBox.classList.add(color);
-}
+
 function setLocation(box, e) {
     let offset = parseInt(e.target.getAttribute("class").slice(2));
     let top = 0.5 + offset;
-    infoBox.style.top = top+"rem";
-    infoBox.style.left = 50+"vw";
-    infoBox.style.opacity = 1;
+    box.style.top = top+"rem";
+    box.style.left = 50+"vw";
+    box.style.opacity = 1;
+}
+function appendBox(box) {
+    boxes.appendChild(box);
 }
 
 
