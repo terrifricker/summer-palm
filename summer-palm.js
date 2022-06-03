@@ -47,8 +47,12 @@ function createNewElement(e) {
 }
 
 
-/* Old setLocation function that located boxes to left or right and down
-   depending on the vertical height of the clicked element.
+function appendBox(box) {
+    boxes.appendChild(box);
+}
+
+
+/* Commenting out old setLocation function
 
 function setLocation(box, e) {
     let offset = parseInt(e.target.getAttribute("class").slice(2));
@@ -67,8 +71,5 @@ function setLocation(box, e) {
     let top = 0.5 + offsetY;
     box.style.top = top+"vh";
 }
-function appendBox(box) {
-    boxes.appendChild(box);
-}
+*/
 
-end old setLocation function */
