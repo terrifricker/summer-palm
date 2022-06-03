@@ -20,13 +20,14 @@
     --box-container-width: 8rem;
     --box-container-height: 10rem;
 }
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 svg {
     height: var(--svg-height);
     position: relative;
-}
-.svg-image {
-    display: flex;
-    justify-content: center;
 }
 .boxes {
     width: var(--box-container-width);
