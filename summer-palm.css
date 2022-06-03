@@ -21,13 +21,13 @@
     --box-container-height: 10rem;
 }
 main {
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 svg {
     height: var(--svg-height);
-    position: relative;
 }
 .boxes {
     width: var(--box-container-width);
@@ -44,7 +44,7 @@ a:hover {
 .info-box {
     width: var(--box-width);
     height: var(--box-height);
-    position: absolute;
+    position: relative;
     border: 2pt solid black;
     display: flex;
     flex-direction: column;
