@@ -17,6 +17,8 @@
     --svg-height: 60vh;
     --box-width: 6rem;
     --box-height: 8rem;
+    --box-container-width: 8rem;
+    --box-container-height: 10rem;
 }
 svg {
     height: var(--svg-height);
@@ -25,6 +27,10 @@ svg {
 .svg-image {
     display: flex;
     justify-content: center;
+}
+.boxes {
+    width: var(--box-container-width);
+    height: var(--box-container-height);
 }
 a:link,
 a:visited {
