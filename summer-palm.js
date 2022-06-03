@@ -46,6 +46,13 @@ function createNewElement(e) {
     return newBoxDiv;
 }
 
+function appendBox(box) {
+    boxes.appendChild(box);
+}
+
+
+/* Commenting out old setLocation function
+
 function setLocation(box, e) {
     let offset = parseInt(e.target.getAttribute("class").slice(2));
     let offsetY = 0;
@@ -63,8 +70,6 @@ function setLocation(box, e) {
     let top = 0.5 + offsetY;
     box.style.top = top+"vh";
 }
-function appendBox(box) {
-    boxes.appendChild(box);
-}
 
+*/
 
