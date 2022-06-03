@@ -46,6 +46,7 @@ function createNewElement(e) {
     return newBoxDiv;
 }
 
+
 function appendBox(box) {
     boxes.appendChild(box);
 }
@@ -70,6 +71,5 @@ function setLocation(box, e) {
     let top = 0.5 + offsetY;
     box.style.top = top+"vh";
 }
-
 */
 
