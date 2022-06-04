@@ -20,8 +20,9 @@ const boxes = document.querySelector(".boxes");
 summerPalm.addEventListener('click', newColorBox);
 
 function newColorBox(e) {
+    if (boxes.firstChild) {boxes.removeChild(boxes.firstChild)};
     let box = createNewElement(e);
-    appendBox(box);
+    boxes.appendChild(box);
 }
 function createNewElement(e) {
     // create the info box container
@@ -43,8 +44,4 @@ function createNewElement(e) {
     newBoxDiv.appendChild(newSquare);
 
     return newBoxDiv;
-}
-
-function appendBox(box) {
-    boxes.appendChild(box);
 }
