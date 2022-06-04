@@ -21,7 +21,6 @@ summerPalm.addEventListener('click', newColorBox);
 
 function newColorBox(e) {
     let box = createNewElement(e);
-    setLocation(box, e);
     appendBox(box);
 }
 function createNewElement(e) {
@@ -46,30 +45,6 @@ function createNewElement(e) {
     return newBoxDiv;
 }
 
-
 function appendBox(box) {
     boxes.appendChild(box);
 }
-
-
-/* Commenting out old setLocation function
-
-function setLocation(box, e) {
-    let offset = parseInt(e.target.getAttribute("class").slice(2));
-    let offsetY = 0;
-    let offsetX = 0;
-
-    // if offset is odd move to right
-    if (offset % 2 == 1) {
-        offsetX = 100+'vh';
-    }
-    // else move to left
-    else offsetX = 25+'vh';
-    box.style.left = offsetX;
-
-    offsetY = 7 * offset;
-    let top = 0.5 + offsetY;
-    box.style.top = top+"vh";
-}
-*/
-
