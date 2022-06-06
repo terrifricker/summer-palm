@@ -1,25 +1,5 @@
-<!-- 
-This website starts with a svg image.  When an area of
-the image is clicked, an information box is created by javascript
-that gives information about what was clicked.
-Currently, the information shown is the color name and a box
-with the same background color of the area clicked in the svg.
-
-Within the svg code, anchor links were added to the defined areas
-I wanted. The event listener gathers the color information from the
-event target to create an the information box.
-
-Still intend to:
-
-Have the info box transition from zero size at the position of the click to
-correct size at a given location.
-
-Have the box disappear if a new position is clicked.
--->
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
     <head>
         <meta charset="utf-9">
         <title>Summer Palm Clickable</title>
@@ -29,7 +9,8 @@ Have the box disappear if a new position is clicked.
     <body>
 		<main>
         <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
 <style type="text/css">
@@ -516,7 +497,7 @@ Have the box disappear if a new position is clicked.
   </a>
 </g>
 </svg>
-<div class="boxes"></div>
+<div class="box-container"></div>
 </main>
 
 <script src="summer-palm.js"></script>
