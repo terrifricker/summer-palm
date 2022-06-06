@@ -17,10 +17,10 @@ const allColors = {
 const summerPalm = document.querySelector("svg");
 const boxContainer = document.querySelector(".box-container");
 
-summerPalm.addEventListener('click', newColorBox);
+summerPalm.addEventListener('click', showBox);
 
-function newColorBox(e) {
-    if (boxes.firstChild) {boxes.removeChild(boxes.firstChild)};
+function showBox(e) {
+    // if there is already a box, remove it
     if (boxContainer.firstChild) {
         boxContainer.removeChild(boxContainer.firstChild)
     };
