@@ -15,15 +15,15 @@ const allColors = {
 }
 
 const summerPalm = document.querySelector("svg");
-const boxes = document.querySelector(".boxes");
+const boxContainer = document.querySelector(".box-container");
 
 summerPalm.addEventListener('click', newColorBox);
 
 function newColorBox(e) {
     if (boxes.firstChild) {boxes.removeChild(boxes.firstChild)};
-    let box = createNewElement(e);
-    boxes.appendChild(box);
-}
+    if (boxContainer.firstChild) {
+        boxContainer.removeChild(boxContainer.firstChild)
+    };
 function createNewElement(e) {
     // create the info box container
     const newBoxDiv = document.createElement('div');
