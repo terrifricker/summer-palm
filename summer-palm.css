@@ -29,12 +29,9 @@ main {
 svg {
     height: var(--svg-height);
 }
-.boxes {
+.box-container {
     width: var(--box-container-width);
     height: var(--box-container-height);
-    display: flex;
-    place-content: center;
-    place-items: center;
 }
 a:link,
 a:visited {
