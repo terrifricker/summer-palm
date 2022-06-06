@@ -14,11 +14,11 @@
 	--st7: #4E848C;
 	--st8: #476060;
 	--st9: #392C1F;
-    --svg-height: 60vh;
-    --box-width: 6rem;
-    --box-height: 8rem;
-    --box-container-width: 8rem;
-    --box-container-height: 10rem;
+    --svg-height: 80vh;
+    --box-width: 10rem;
+    --box-height: 16rem;
+    --box-container-width: 12rem;
+    --box-container-height: 18rem;
 }
 main {
     width: 100vw;
@@ -59,8 +59,8 @@ p {
     text-align: center;
 }
 .color-box {
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 8rem;
     border: 0.5pt solid black;
 }
 .st0 {
