@@ -21,6 +21,8 @@
     --box-container-height: 10rem;
 }
 main {
+    width: 100vw;
+    height: 100vh;
     position: relative;
     display: flex;
     justify-content: space-evenly;
