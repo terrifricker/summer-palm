@@ -24,7 +24,7 @@ function showBox(e) {
     if (boxContainer.firstChild) {
         boxContainer.removeChild(boxContainer.firstChild)
     };
-function createNewElement(e) {
+
     // create the info box container
     const newBoxDiv = document.createElement('div');
     newBoxDiv.classList.add("info-box");
@@ -43,5 +43,6 @@ function createNewElement(e) {
     newBoxDiv.appendChild(newParagaraph);
     newBoxDiv.appendChild(newSquare);
 
-    return newBoxDiv;
+    // center info box on click coordinates
 }
+
